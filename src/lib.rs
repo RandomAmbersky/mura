@@ -1,1 +1,3 @@
-pub mod engine;
+mod engine;
+
+pub use engine::Engine as Engine;

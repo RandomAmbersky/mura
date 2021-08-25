@@ -1,6 +1,6 @@
-use mura::engine;
+use mura::Engine;
 
 fn main() {
-    let e = engine::Engine::new();
+    let e = Engine::new();
     e.log("Hello world!")
 }
