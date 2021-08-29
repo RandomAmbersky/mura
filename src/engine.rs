@@ -13,13 +13,13 @@ impl Drop for Engine {
 impl Engine {
     pub fn new () -> Self {
         let logger = Logger::new();
-        let e = Self {
+        let mut e = Self {
             logger
         };
         e.log("New");
         e
     }
-    pub fn log (&self, mess: &str) {
+    pub fn log (&mut self, mess: &str) {
         self.logger.log("Engine", mess);
     }
 }
