@@ -1,4 +1,5 @@
-use crate::logger::Logger;
+use crate::logger::{Logger};
+use crate::interfaces::ILogger;
 
 pub struct Engine {
     logger: Logger

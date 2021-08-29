@@ -1,4 +1,5 @@
 use std::time::Instant;
+use crate::interfaces::ILogger;
 
 pub struct Logger {
     start: Instant
@@ -10,13 +11,13 @@ impl Drop for Logger {
     }
 }
 
-impl Logger {
-    pub fn new () -> Self {
+impl ILogger for Logger {
+    fn new () -> Self {
         Self {
             start: Instant::now()
         }
     }
-    pub fn log(&mut self, service: &str, message: &str) {
+    fn log(&mut self, service: &str, message: &str) {
         let elapsed = self.start.elapsed();
         self.start = Instant::now();
         println!("{:?}| {}: {}", elapsed, service, message);
