@@ -1,4 +1,4 @@
-use crate::logger::{Logger};
+use crate::hal::webgl::Logger;
 use crate::interfaces::ILogger;
 
 pub struct Engine {

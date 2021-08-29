@@ -1,5 +1,5 @@
 mod engine;
-mod logger;
 mod interfaces;
+mod hal;
 
 pub use engine::Engine as Engine;
