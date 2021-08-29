@@ -18,6 +18,7 @@ impl Logger {
     }
     pub fn log(&self, service: &str, message: &str) {
         let elapsed = self.start.elapsed();
+        // self.start = Instant::now();
         println!("{:?}| {}: {}", elapsed, service, message);
     }
 }
